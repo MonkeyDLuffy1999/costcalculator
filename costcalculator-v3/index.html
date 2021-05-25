@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>NRSPP Cost Calculator</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>\
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+
+<!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- favicon -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+
+<body class="jumbotron">
+
+
+  <section class="header">
+
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
+      <div class="container-fluid">
+        <a href="#" class="main-logo">
+          <img class="logo" src="https://www.nrspp.org.au/wp-content/themes/nrspp/images/nrspp-logo.svg" alt="NRSPP logo">
+        </a>
+
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#"> Contact </a></li>
+
+        </ul>
+      </div> -->
+
+
+        <div class="btn-group">
+
+          <button type="button" class="data-button btn btn-sm btn-outline-success dropdown-toggle" data-bs-toggle="dropdown">
+            Menu
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+  </section>
+
+
+  <section class="middle">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-6">
+
+          <form action="header" method="post">
+
+          <h5>Total Road Incident Cost Calculator</h5>
+          <h6>NRSPP Calculation</h6><br />
+
+                  <div class="data-entry">
+              <form id="regForm" action="page2">
+                <!-- One "tab" for each step in the form: -->
+                <div class="tab">
+
+                    <button type="button" id="welcomebtn" class="data-button btn btn-outline-success btn-sm btn-active">Welcome</button>
+                    <hr>
+                  <span>Your Sector</span>
+                  <select class="form-select">
+                    <option selected>Please select</option>
+                    <option value="1">General Manufacturing</option>
+                    <option value="2">Agriculture and Livestock</option>
+                    <option value="3">Services - Food and Beverages</option>
+                    <option value="4">Services - Utilities</option>
+                    <option value="5">Services - Banking and finance</option>
+                    <option value="6">Construction and associated trades</option>
+                    <option value="">Public Transportation</option>
+                    <option value="">Transport - interstate and heavy haulage</option>
+                    <option value="">Transport - interstate haulage and distribution</option>
+                    <option value="">Transport - light haulage and freight</option>
+                    <option value="">Transport - postal services</option>
+                    <option value="">Transport - mixed freight</option>
+                    <option value="">Transport - other transport</option>
+                    <option value="">Other manufacturing</option>
+                    <option value="">Other</option>
+                    </select>
+                  <br />
+                  <label class="form-label">Your main revenue earner</label>
+                  <input class="form-control" type="text" placeholder="Enter revenue earner" oninput="this.className = ''" name="1.2">
+
+                </div>
+
+
+
+                <div class="tab">
+                  <a id="top">
+                    <button type="button" class="dataEntrybtn data-button btn btn-outline-success btn-sm">Data entry</button></a>
+<hr>
+                  <p>
+                    Annual unit sales of ?<br />
+                    <input oninput="this.className = ''" name="1.3" />
+                  </p>
+                  <p>
+                    Annual claims data-cost of incident (insurer's costs)<br />
+                    <input oninput="this.className = ''" name="2.1" />
+                  </p>
+                  <p>
+                    Annual claims data-number of incidents <br />
+                    <input oninput="this.className = ''" name="2.2" />
+                  </p>
+                  <p>
+                    Total number of Vehicles<br />
+                    <input oninput="this.className = ''" name="2.3" id="2.31" />
+                  </p>
+                  <p>
+                    Annual total distance travelled by fleet (kms)<br />
+                    <input oninput="this.className = ''" name="2.4" />
+                  </p>
+                  <p>
+                    Annual fleet insurance Premium<br />
+                    <input oninput="this.className = ''" name="2.5" id="2.51" />
+                  </p>
+                  <p>
+                    Premium per vehicle<br />
+                    <input oninput="this.className = ''" name="2.6" />
+                  </p>
+                  <p>
+                    Excess per claim <br />
+                    <input oninput="this.className = ''" name="2.7" />
+                  </p>
+                  <p id="return">Return on</p>
+                  <p>
+                    <input oninput="this.className = ''" name="2.8" />
+                  </p>
+                  <p>
+                    Gross Annual turnover<br />
+                    <input oninput="this.className = ''" name="2.9" />
+                  </p>
+                  <p id="profits">Profits from</p>
+                  <p>
+                    <input oninput="this.className = ''" name="2.10" />
+                  </p>
+                  <p>
+                    Average unit costs of <br />
+                    <input oninput="this.className = ''" name="2.11" />
+                  </p>
+                  <p>
+                    Grey fleet<br />
+                    <input oninput="this.className = ''" name="2.12" />
+                  </p>
+                  <p>
+                    Estimated average annual business fleet travel (kms) of employees
+                    using their own vehicle (if you are liable for grey fleet)<br />
+                    <input oninput="this.className = ''" name="2.13" />
+                  </p>
+                </div>
+
+
+
+
+                <div class="tab">
+                  <a id="top">
+                    <button type="button" class="calculationbtn data-button btn btn-outline-success btn-sm">Calculation</button></a>
+                    <hr>
+                  <p>
+                    Overall Claim Rate per 100,000 Kilometres<br />
+                    <input oninput="this.className = ''" name="3.1" />
+                  </p>
+                  <p>
+                    Kilometres travelled per claim for combined fleet<br />
+                    <input oninput="this.className = ''" name="3.2" />
+                  </p>
+                  <p>
+                    Overall Claim Rate per Vehicle<br />
+                    <input oninput="this.className = ''" name="3.3" />
+                  </p>
+                  <a id="division">Direct Cost <font-s>16</font-s></a>
+                  <p>
+                    Cost<br />
+                    <input oninput="this.className = ''" name="3.4" />
+                  </p>
+                  <p>
+                    As percentage of Gross Turnover<br />
+                    <input oninput="this.className = ''" name="3.5" />
+                  </p>
+                  <p>
+                    As percentage of Net Profit<br />
+                    <input oninput="this.className = ''" name="3.6" />
+                  </p>
+                  <a id="division">indirect Cost <font-s>16</font-s></a>
+                  <p>
+                    Cost<br />
+                    <input oninput="this.className = ''" name="3.7" />
+                  </p>
+                  <p>
+                    As percentage of Gross Turnover<br />
+                    <input oninput="this.className = ''" name="3.8" />
+                  </p>
+                  <p>
+                    As percentage of Net Profit<br />
+                    <input oninput="this.className = ''" name="3.9" />
+                  </p>
+                  <a id="division">Estimated Total Costs - Managed Fleet Only <font-s>16</font-s></a>
+                  <p>
+                    Cost<br />
+                    <input oninput="this.className = ''" name="3.10" />
+                  </p>
+                  <p>
+                    As percentage of Gross Turnover<br />
+                    <input oninput="this.className = ''" name="3.11" />
+                  </p>
+                  <p>
+                    As percentage of Net Profit<br />
+                    <input oninput="this.className = ''" name="3.12" />
+                  </p>
+                  <a id="division"
+                    >Estimated Total Costs - All Vehicles<font-s>16</font-s></a
+                  >
+                  <p>
+                    Cost<br />
+                    <input oninput="this.className = ''" name="3.13" />
+                  </p>
+                  <p>
+                    As percentage of Gross Turnover<br />
+                    <input oninput="this.className = ''" name="3.14" />
+                  </p>
+                  <p>
+                    As percentage of Net Profit<br />
+                    <input oninput="this.className = ''" name="3.15" />
+                  </p>
+                </div>
+
+
+
+                <div class="tab">
+
+                    <button type="button" class="finalOutcomebtn data-button btn btn-outline-success btn-sm">Final outcome</button>
+                    <hr>
+                  <p>
+                    Unit Revenue<br />
+                    <input oninput="this.className = ''" name="4.1" />
+                  </p>
+                  <p>
+                    Direct incident costs<br />
+                    <input oninput="this.className = ''" name="3.41" />
+                  </p>
+                  <p>
+                    Direct incident costs<br />
+                    <input oninput="this.className = ''" name="3.42" />
+                  </p>
+                  <p>
+                    indirect incident costs<br />
+                    <input oninput="this.className = ''" name="3.71" />
+                  </p>
+                  <p>
+                    indirect incident costs<br />
+                    <input oninput="this.className = ''" name="3.72" />
+                  </p>
+                  <p>
+                    Total incident costs managed fleet<br />
+                    <input oninput="this.className = ''" name="3.101" />
+                  </p>
+                  <p>
+                    Total incident costs managed fleet<br />
+                    <input oninput="this.className = ''" name="3.102" />
+                  </p>
+                  <p>
+                    Total incident costs - all vehicles ( managed + grey fleet )<br />
+                    <input oninput="this.className = ''" name="3.131" />
+                  </p>
+                  <p>
+                    Total incident costs - all vehicles ( managed + grey fleet )<br />
+                    <input oninput="this.className = ''" name="3.132" />
+                  </p>
+
+                </div>
+
+<div class="tab">
+  <p><span>Thanks for contacting us! We will get in touch with you shortly.</span</p><br>
+
+
+<p>
+The National Road Safety Partnership Program (NRSPP) Total Road Incident Cost Calculator was designed to provide organisations with an estimate of the direct and indirect costs associated with a road incident.
+</p>
+
+<p>The calculator presents an estimate of total incident costs in simple terms, underlining how much each incident could potentially cost an organisation in terms of lost revenue or service provision.
+In so doing, it helps organisations understand the cost of road incidents relative to productivity, profitability and service delivery
+The calculator will help you articulate the additional production or service delivery needed to recover the Total Cost of Risk.
+</p>
+
+</div>
+
+                <div style="overflow: auto" class="prevandnextbtn">
+                  <div style="float: right">
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="btn btn-outline-success btn-sm">
+                      Previous
+                    </button>
+                    <button type="button" id="calc" style="display: none" onclick="nextPrev(0)" class="btn btn-outline-success btn-sm">
+                      Calculate
+                    </button>
+
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)" class="btn btn-success btn-sm">
+                      Next
+                    </button>
+                  </div>
+                </div>
+                <!-- Circles which indicates the steps of the form: -->
+                <div style="text-align: center; margin-top: 40px">
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                </div>
+              </form>
+
+              <script>
+                var currentTab = 0; // Current tab is set to be the first tab (0)
+                showTab(currentTab); // Display the current tab
+
+                function showTab(n) {
+                  // This function will display the specified tab of the form...
+                  var x = document.getElementsByClassName("tab");
+                  x[n].style.display = "block";
+                  //... and fix the Previous/Next buttons:
+                  if (n == 0) {
+                    document.getElementById("prevBtn").style.display = "none";
+
+                      // document.getElementById("welcomebtn").style.color = "green";
+
+                    // document.getElementById("calc").onClick =calculate(0);
+                  } else {
+                    document.getElementById("prevBtn").style.display = "inline";
+
+                    // document.getElementById("calc").onClick =calculate(1);
+                  }
+
+                  if (n == x.length - 2) {
+                    document.getElementById("nextBtn").innerHTML = "Submit";
+
+                  }
+                  else if(n == x.length - 1){
+                    document.getElementById("nextBtn").style.display = "none";
+                  }
+                  else {
+                    document.getElementById("nextBtn").innerHTML = "Next";
+
+                    document.getElementById("nextBtn").style.display = "inline";
+                  }
+
+
+                  //... and run a function that will display the correct step indicator:
+                  fixStepIndicator(n);
+                  // calculate(n);
+                }
+
+                function nextPrev(n) {
+                  // This function will figure out which tab to display
+                  var x = document.getElementsByClassName("tab");
+                  // Exit the function if any field in the current tab is invalid:
+                  if (n == 1 && !validateForm()){
+                  return false;
+                  }
+
+                  // Hide the current tab:
+                  x[currentTab].style.display = "none";
+                  // Increase or decrease the current tab by 1:
+                  currentTab = currentTab + n;
+
+                  // if you have reached the end of the form...
+                  if (currentTab >= x.length) {
+                    // ... the form gets submitted:
+                    document.getElementById("regForm").submit();
+                    return false;
+                  }
+                  // Otherwise, display the correct tab:
+
+                  showTab(currentTab);
+                  console.log("Current tab from next prev " + currentTab);
+                  //   calculate(currentTab);
+                }
+
+                function validateForm() {
+                  // This function deals with validation of the form fields
+                  var x,
+                    y,
+                    i,
+                    valid = true;
+                  x = document.getElementsByClassName("tab");
+                  y = x[currentTab].getElementsByTagName("input");
+                  // A loop that checks every input field in the current tab:
+                  for (i = 0; i < y.length; i++) {
+                    // If a field is empty...
+                    if (y[i].value == "") {
+                      // add an "invalid" class to the field:
+                      y[i].className += " invalid";
+                      // and set the current valid status to false
+                      // valid = false;
+                      valid = true;
+                    }
+                  }
+                  // If the valid status is true, mark the step as finished and valid:
+                  if (valid) {
+                    document.getElementsByClassName("step")[currentTab].className +=
+                      " finish";
+                  }
+                  return valid; // return the valid status
+                }
+
+                function calculate(n) {
+                  if (n == 0) {
+                    var reve = document.getElementsByName("1.2")[0].value;
+                    var curr = document.getElementById("curr").value;
+                    document.getElementById("return").innerHTML =
+                      "Return on " + reve + " in %";
+                    document.getElementById("profits").innerHTML = "Profits from " + reve;
+                    document
+                      .getElementsByName("2.1")[0]
+                      .setAttribute("placeholder", "Enter the amount in " + curr);
+                  } else if (n == 1) {
+                    costOfIncident = parseInt(document.getElementsByName("2.1")[0].value);
+                    incidents = parseInt(document.getElementsByName("2.2")[0].value);
+                    vehicles = parseInt(document.getElementById("2.31").value);
+                    totalDistance = parseInt(document.getElementsByName("2.4")[0].value);
+                    annualInsurance = parseInt(
+                      document.getElementsByName("2.5")[0].value
+                    );
+                    excessPerClaim = parseInt(document.getElementsByName("2.7")[0].value);
+                    returnPercentage =
+                      parseInt(document.getElementsByName("2.8")[0].value) / 100;
+                    annualTurnOver = parseInt(document.getElementsByName("2.9")[0].value);
+                    avgUnitCost = parseInt(document.getElementsByName("2.11")[0].value);
+                    greyFleet = parseInt(document.getElementsByName("2.12")[0].value);
+                    avgFleetTravel = parseInt(
+                      document.getElementsByName("2.13")[0].value
+                    );
+                    perVehicle = annualInsurance / vehicles;
+                    kmPerClaim = totalDistance / incidents;
+                    profits = returnPercentage * annualTurnOver;
+                    cost = vehicles * costOfIncident;
+                    indirectCost = costOfIncident * 3;
+                    totalCost = cost + indirectCost;
+                    estimatedAvg = totalCost / incidents;
+                    eocn = (greyFleet * avgFleetTravel) / kmPerClaim;
+                    eocc = eocn * estimatedAvg;
+                    reocc = eocc / returnPercentage;
+                    estdTotal = totalCost + reocc;
+
+                    console.log(typeof returnPercentage);
+                    console.log(returnPercentage + " " + annualTurnOver);
+                    if (Number.isNaN(perVehicle)) {
+                        window.alert("Please enter a valid data");
+                    } else {
+                      document.getElementsByName("2.6")[0].value = perVehicle;
+                      document.getElementsByName("2.10")[0].value = profits;
+                      document.getElementsByName("3.1")[0].value =
+                        (incidents * 100000) / totalDistance;
+                      document.getElementsByName("3.2")[0].value = kmPerClaim;
+                      document.getElementsByName("3.3")[0].value =
+                        (incidents / vehicles) * 100;
+                      // direct costs
+                      document.getElementsByName("3.4")[0].value = cost;
+                      document.getElementsByName("3.5")[0].value =
+                        (cost / annualTurnOver) * 100;
+                      document.getElementsByName("3.6")[0].value = (cost / profits) * 100;
+                      // indirect costs
+                      document.getElementsByName("3.7")[0].value = indirectCost;
+                      document.getElementsByName("3.8")[0].value =
+                        (indirectCost / annualTurnOver) * 100;
+                      document.getElementsByName("3.9")[0].value =
+                        (indirectCost / profits) * 100;
+                      // Estimated total costs - managed fleet only
+                      document.getElementsByName("3.10")[0].value = totalCost;
+                      document.getElementsByName("3.11")[0].value =
+                        (totalCost / annualTurnOver) * 100;
+                      document.getElementsByName("3.12")[0].value =
+                        (totalCost / profits) * 100;
+                      // Estimated total costs – all vehicles
+                      document.getElementsByName("3.13")[0].value = estdTotal;
+                      document.getElementsByName("3.14")[0].value =
+                        (estdTotal / annualTurnOver) * 100;
+                      document.getElementsByName("3.15")[0].value =
+                        (estdTotal / profits) * 100;
+                      // Page four
+                      document.getElementsByName("4.1")[0].value =
+                        returnPercentage * avgUnitCost;
+                      document.getElementsByName("3.41")[0].value = cost;
+                      document.getElementsByName("3.42")[0].value = cost;
+                      document.getElementsByName("3.71")[0].value = indirectCost;
+                      document.getElementsByName("3.72")[0].value = indirectCost;
+                      document.getElementsByName("3.101")[0].value = totalCost;
+                      document.getElementsByName("3.102")[0].value = totalCost;
+                      document.getElementsByName("3.131")[0].value = estdTotal;
+                      document.getElementsByName("3.132")[0].value = estdTotal;
+
+                      // window.alert("There " + perVehicle);
+                    }
+                  } else if (n == 2) {
+                    // window.alert("Third page " + perVehicle);
+                  }
+                }
+
+                function fixStepIndicator(n) {
+                  // This function removes the "active" class of all steps...
+                  var i,
+                    x = document.getElementsByClassName("step");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].className = x[i].className.replace(" active", "");
+                  }
+                  //... and adds the "active" class on the current step:
+                  console.log(i + ", " + n);
+                  if (n == 0) calculate(n);
+                  else calculate(n - 1);
+                  x[n].className += " active";
+                }
+              </script>
+
+  </div>
+          <hr>
+          <button onclick="window.print()" class="btn btn-outline-success btn-sm">Print</button>
+        </form>
+  </div>
+
+
+
+        <div class="col-lg-6">
+          <div class="input-group mb-3 search-box">
+            <input type="text" class="form-control" placeholder="Type" aria-label="Username" aria-describedby="basic-addon1">
+            <button class="input-group-text searchbox" id="basic-addon1" type="submit" method="post"><img class="searchlogo" src="images/searchlogo.PNG"></button>
+
+          </div>
+
+          <img class="carcrashimg" src="images/greencar.jpg" alt="">
+          <!-- <div class="imgtext">
+            <p>Worried about your car crash</p> <br />
+            <p>Let us handle</p>
+          </div> -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="bottom">
+
+    <div class="container-fluid">
+      <div class="row description">
+        <div class="col-lg-4">
+          <h6>
+            <div class="about">
+              What is NRSPP calculator?
+            </div>
+          </h6>
+          <p class = "about-description">The National Road Safety Partnership Program (NRSPP) Total Road Incident Cost Calculator was designed to provide organisations with an estimate of the direct and indirect costs associated with a road incident.
+
+            The calculator presents an estimate of total incident costs in simple terms, underlining how much each incident could potentially cost an
+
+          </p>
+
+        </div>
+        <div class="col-lg-4">
+          <h6>
+            <div class="about"></div>
+          </h6>
+          <p class = "about-description"><br>
+            organisation in terms of lost revenue or service provision. In so doing, it helps organisations understand the cost of road incidents relative to productivity, profitability and service delivery. The calculator will help you articulate
+            the additional production or service delivery needed to recover the Total Cost of Risk.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h6>
+            <div class="about">
+              Who Can Use The Calculator?</div>
+          </h6>
+          <p class = "about-description">
+            The calculator recognises the differences in operations and business structure across different sectors. To this end, tailored solutions and calculations are provided for the Manufacturing and Services sector, State and Local Government
+            sector, Health and Emergency Services and Other Community Services and Not-for-Profit organisations.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="related-content">
+    <div class="container-fluid">
+          <h1>Related contents</h1>
+      <div class="row">
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+          <img class="card-img-top firstimage" src="https://quantreports.com/wp-content/uploads/2020/01/a4-stack-v2.jpg" alt="Card image cap">
+        <h5 class="card-title">Factsheet</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-success">Learn more</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+          <img class="card-img-top secondimage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOhOkPCRUcjQ2zfX9kFZcDC5jIkTwEn2JS_g&usqp=CAU" alt="Card image cap">
+        <h5 class="card-title">Packages</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-success">Learn more</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+          <img class="card-img-top lastimage" src="https://cdn-s3-nrspp-2020.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/sites/4/2021/02/04131330/muarc-graduatecourse.jpg" alt="Card image cap">
+        <h5 class="card-title">News Insights</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-success">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <section class="subscription">
+    <div class="container-fluid">
+<p class="subscriptiontext">Subscribe to our monthly newsletter</p>
+      <form class="row row-cols-lg-auto subscriptionform">
+    <div class="col-12">
+        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+    </div>
+
+    <div class="col-12">
+        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Email">
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-outline-success subbutton">Subscribe</button>
+    </div>
+  </form>
+
+</div>
+  </section>
+<section class="footer">
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p class="footertext">© 2021 NRSPP Australia. All Rights Reserved</p>
+
+      <div class="row">
+        <div class="col-6">
+          <p class="terms">Terms and Conditon </p>
+        </div>
+        <div class="col-6">
+
+      <p class="contact">Contact us</p>
+        </div>
+
+      </div>
+
+
+      </div>
+
+  </footer>
+</section>
+
+
+</body>
+
+</html>

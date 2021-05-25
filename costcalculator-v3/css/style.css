@@ -1,0 +1,162 @@
+.logo{
+  height: 50px;
+  padding: 0;
+}
+
+.navbar{
+  height:70px;
+  padding: 0 0 1px;
+}
+
+body{
+  color: #414D40;
+
+}
+
+h5 {
+  padding-top: 1rem;
+color:#888888;
+}
+
+h1, .requirementList{
+  padding: 1rem 0;
+  color:#888888;
+}
+
+h6, h2{
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color:#17b978;
+}
+
+.container-fluid{
+  margin: 2rem;
+  padding: 0 5rem;
+
+}
+
+.data-button:hover{
+  background-color:#17b978;
+}
+
+.next-button{
+    color:#fff;
+  background-color:#17b978;
+}
+
+.prevandnextbtn{
+  padding: 1rem 0 0;
+}
+
+.data-entry{
+  padding: 1rem 0;
+  font-size: 80%;
+}
+
+.calculationSubHeading{
+  font-size: 150%;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+.search-box{
+  float: right;
+  padding: 1.5rem 0;
+  width: 50%;
+}
+.searchlogo{
+  width:30%;
+}
+.searchbox{
+  width: 40%;
+}
+
+.carcrashimg{
+  width: 90%;
+  padding-left: 4.5rem;
+  padding-top: 3.5rem;
+}
+/*
+.imgtext{
+  font-style: Merriweather;
+  color: #17b978;
+} */
+hr{
+  border: 1px solid;
+}
+.about-description{
+  padding-top: 1rem;
+  font-size: 85%;
+}
+
+.bottom{
+  color:#fff;
+  background-color:#17b978;
+  text-align: justify;
+}
+
+.about{
+  color:#fff;
+}
+
+.card-img-top{
+  width:50%;
+}
+.firstimage{
+  width:100%;
+}
+.secondimage{
+  width: 100%;
+}
+.lastimage{
+  width: 100%;
+}
+
+.subscription{
+  background-color: #17b978;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+.subscriptiontext{
+  color:#fff;
+}
+
+.subbutton{
+  background-color: #fff;
+  color:#17b978;
+}
+.subbutton:hover{
+  background-color: #198754;
+  color:#fff;
+}
+
+footer{
+  text-align: center;
+}
+.footertext{
+  color: #8f8f8f;
+}
+.social-icon {
+  margin: 20px 10px;
+}
+.contact{
+ font-size: 15px;
+text-align: right;
+color:#8f8f8f;
+}
+ .terms{
+  font-size: 15px;
+text-align: left;
+color:#8f8f8f;
+}
+
+@media (max-width: 1028px) {
+
+  #title {
+    text-align: center;
+  }
+}
+
+.tab {
+  display: none;
+}
