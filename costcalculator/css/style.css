@@ -43,6 +43,11 @@ h6, h2{
     color:#fff;
   background-color:#17b978;
 }
+
+.prevandnextbtn{
+  padding: 1rem 0 0;
+}
+
 .data-entry{
   padding: 1rem 0;
   font-size: 80%;
@@ -66,6 +71,16 @@ h6, h2{
   width: 40%;
 }
 
+.carcrashimg{
+  width: 90%;
+  padding-left: 4.5rem;
+  padding-top: 3.5rem;
+}
+/*
+.imgtext{
+  font-style: Merriweather;
+  color: #17b978;
+} */
 hr{
   border: 1px solid;
 }
@@ -140,4 +155,8 @@ color:#8f8f8f;
   #title {
     text-align: center;
   }
+}
+
+.tab {
+  display: none;
 }
